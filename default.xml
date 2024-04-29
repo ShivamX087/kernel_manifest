@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="aosp" fetch="https://android-review.googlesource.com/" />
+  <remote name="shivam" fetch="https://github.com/ShivamX087" revision="fourteen" />
+
+  <default revision="master-kernel-build-2021" remote="aosp" sync-j="4" />
+
+  <superproject name="kernel/superproject" remote="aosp" revision="common-android12-5.10" />
+
+  <project path="build" name="kernel/build" remote="aosp" />
+  <project path="kernel/tests" name="kernel/tests" remote="aosp" />
+  <project path="kernel/configs" name="kernel/configs" remote="aosp" />
+  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android12-5.10" remote="aosp" >  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" remote="aosp">  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-g>  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" remote="aosp" />
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" />
+  <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" remote="aosp" />
+
+  <project path="kernel-5.10" name="kernel_motorola_vicky" remote="shivam" clone-depth="1" >
+    <linkfile dest="build.config" src="build.config.vicky" />
+  </project>
+
+  <project path="vendor" name="kernel_motorola_vicky-modules" remote="shivam" clone-depth="1" />
+
+</manifest>
