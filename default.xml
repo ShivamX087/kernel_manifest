@@ -17,7 +17,7 @@
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" />
   <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" remote="aosp" />
 
-  <project path="kernel-5.10" name="kernel_motorola_vicky" remote="shivam" clone-depth="1" >
+  <project path="kernel-5.10" name="kernel/coomon" remote="aosp" revision="android12-5.10" clone-depth="1" >
     <linkfile dest="build.config" src="build.config.vicky" />
   </project>
 
